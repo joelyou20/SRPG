@@ -1,9 +1,10 @@
-[gd_scene load_steps=4 format=4 uid="uid://cn784pod7ldax"]
+[gd_scene load_steps=5 format=4 uid="uid://bixagw5r7s6yq"]
 
-[ext_resource type="Texture2D" uid="uid://bebeceky7hkut" path="res://iso_tileset.png" id="2_v2biq"]
+[ext_resource type="Texture2D" uid="uid://diagei4pit04h" path="res://iso_tileset.png" id="1_8thlo"]
+[ext_resource type="Script" path="res://TileMapLayerManager.gd" id="2_tnyja"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wgqhj"]
-texture = ExtResource("2_v2biq")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t3k51"]
+texture = ExtResource("1_8thlo")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/texture_origin = Vector2i(0, -8)
@@ -20,12 +21,12 @@ texture_region_size = Vector2i(32, 32)
 6:0/0 = 0
 6:0/0/texture_origin = Vector2i(0, -8)
 
-[sub_resource type="TileSet" id="TileSet_y108h"]
+[sub_resource type="TileSet" id="TileSet_7ws38"]
 tile_shape = 1
 tile_layout = 5
 tile_offset_axis = 1
 tile_size = Vector2i(32, 16)
-sources/0 = SubResource("TileSetAtlasSource_wgqhj")
+sources/0 = SubResource("TileSetAtlasSource_t3k51")
 
 [node name="Main" type="Node2D"]
 
@@ -33,20 +34,23 @@ sources/0 = SubResource("TileSetAtlasSource_wgqhj")
 zoom = Vector2(2, 2)
 
 [node name="Layer0" type="TileMapLayer" parent="."]
-y_sort_enabled = true
 use_parent_material = true
-tile_set = SubResource("TileSet_y108h")
+tile_map_data = PackedByteArray("AAD//wAAAAADAAAAAAD+/wAAAAADAAAAAAD+////AAADAAAAAAD/////AAADAAAAAAAAAP//AAADAAAAAAAAAAAAAAADAAAAAAAAAAEAAAADAAAAAAD//wEAAAADAAAAAAD+/wEAAAADAAAAAAA=")
+tile_set = SubResource("TileSet_7ws38")
+script = ExtResource("2_tnyja")
 
 [node name="Layer1" type="TileMapLayer" parent="."]
 z_index = 1
-y_sort_enabled = true
 use_parent_material = true
-tile_map_data = PackedByteArray("AAD+/wAAAAADAAAAAAD//wAAAAADAAAAAAAAAAAAAAADAAAAAAAAAP//AAADAAAAAAD/////AAADAAAAAAD+////AAADAAAAAAD+//7/AAADAAAAAAD///7/AAADAAAAAAAAAP7/AAADAAAAAAABAP7/AAADAAAAAAABAP//AAADAAAAAAABAAAAAAADAAAAAAACAAAAAAADAAAAAAACAP//AAADAAAAAAACAP7/AAADAAAAAAD+/wEAAAADAAAAAAD//wEAAAADAAAAAAAAAAEAAAADAAAAAAABAAEAAAADAAAAAAACAAEAAAADAAAAAAACAAIAAAADAAAAAAABAAIAAAADAAAAAAAAAAIAAAADAAAAAAD//wIAAAADAAAAAAD+/wIAAAADAAAAAAA=")
-tile_set = SubResource("TileSet_y108h")
+tile_map_data = PackedByteArray("AAD+////AAABAAAAAAA=")
+tile_set = SubResource("TileSet_7ws38")
 y_sort_origin = 1
+script = ExtResource("2_tnyja")
 
 [node name="Layer2" type="TileMapLayer" parent="."]
 z_index = 2
 use_parent_material = true
-tile_set = SubResource("TileSet_y108h")
+tile_map_data = PackedByteArray("AAD9//7/AAAGAAAAAAA=")
+tile_set = SubResource("TileSet_7ws38")
 y_sort_origin = 2
+script = ExtResource("2_tnyja")
